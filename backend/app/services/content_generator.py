@@ -60,11 +60,19 @@ class ContentGenerator:
 
     def _call_ai_api(self, prompt, is_json_output=False):
         """Google Gemini API를 호출합니다."""
-        api_key = current_app.config.get('GEMINI_API_KEY')
+        api_key = os.getenv('GEMINI_API_KEY')
         if not api_key:
             raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
-            
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={api_key}"
+
+        # .env 또는 기본값으로부터 모델 이름을 가져옵니다.
+        model_name = os.getenv('GEMINI_MODEL_NAME', 'gemini-1.5-flash-latest')
+        
+        # URL 형식을 최신으로 수정하고, 모델 이름을 동적으로 삽입합니다.
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
+
+        headers = {
+            "Content-Type": "application/json"
+        }
         
         if is_json_output:
             prompt += '\n\n응답은 반드시 다음의 JSON 형식으로만 제공해주세요: {"title": "생성된 제목", "body": "생성된 본문 내용"}'
@@ -72,7 +80,7 @@ class ContentGenerator:
         payload = {"contents": [{"parts": [{"text": prompt}]}]}
         
         try:
-            response = requests.post(url, json=payload, timeout=90)
+            response = requests.post(url, json=payload, headers=headers, timeout=90)
             response.raise_for_status()
             return response.json()
         except requests.exceptions.RequestException as e:
