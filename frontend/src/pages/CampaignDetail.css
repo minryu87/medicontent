@@ -1,0 +1,160 @@
+/* medicontent/frontend/src/pages/CampaignDetail.css */
+.campaign-detail-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-detail-container h2 { /* 페이지 제목 */
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* 캠페인 기본 정보 섹션 */
+.campaign-info-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+}
+
+.campaign-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.campaign-info-header h3 { /* 캠페인 이름 */
+  color: #007bff;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+/* 캠페인 상태 (Campaigns.css의 .campaign-status 와 동일하게 사용 가능하나, 여기서도 정의) */
+.campaign-status {
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+.status-active { background-color: #28a745; } 
+.status-pending { background-color: #ffc107; color: #333; } 
+.status-ended { background-color: #6c757d; } 
+.status-draft { background-color: #17a2b8; } /* 예시: 초안 상태 */
+
+
+.info-item {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.info-item strong {
+  color: #333;
+  margin-right: 5px;
+}
+
+/* 스케줄 등록 폼 섹션 */
+.schedule-form-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.schedule-form-section h3 { /* "컨텐츠 배포/스케줄 등록" 제목 */
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Campaigns.css의 .form-row, .form-field, label, input, button 스타일과 유사하게 적용 */
+.schedule-form-section .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.schedule-form-section .form-field {
+  flex: 1;
+  min-width: 180px;
+}
+
+.schedule-form-section .form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.schedule-form-section input[type="text"],
+.schedule-form-section input[type="number"], /* channelId, contentId가 number일 수 있음 */
+.schedule-form-section input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+.schedule-form-section button {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #28a745; /* Green for schedule action */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.schedule-form-section button:hover {
+  background-color: #218838;
+}
+
+/* 메시지 영역 (Campaigns.css의 스타일 재사용 또는 유사하게 정의) */
+.campaign-detail-message-area {
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.campaign-detail-success-message {
+  background-color: #e8f5e9;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.campaign-detail-error-message {
+  background-color: #ffebee;
+  color: #b71c1c;
+  border: 1px solid #f5c6cb;
+}
+
+/* 페이지 로딩/에러 메시지 */
+.page-loading-message, .page-error-message {
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2rem;
+  color: #555;
+}
+.page-error-message {
+  color: #b71c1c;
+  background-color: #ffebee;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+} 

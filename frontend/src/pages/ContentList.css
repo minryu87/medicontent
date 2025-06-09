@@ -1,0 +1,181 @@
+/* medicontent/frontend/src/pages/ContentList.css */
+.content-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-list-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.content-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-list-item {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.content-list-item:hover {
+  background-color: #f1f1f1;
+}
+
+.content-list-item-title {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.content-list-item-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+.content-list-actions a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  /* 기본 버튼 스타일 상속 또는 정의 */
+  background-color: #6c757d; /* 예: 보조 버튼 색상 */
+  color: white;
+}
+.content-list-actions a:hover {
+  background-color: #545b62;
+}
+
+.link-button { /* 일반 링크를 버튼처럼 보이게 */
+  display: inline-block; /* 중요 */
+  background-color: #007bff;
+  color: white !important; /* 링크 기본 색상 덮어쓰기 */
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+.link-button:hover {
+  background-color: #0056b3;
+}
+
+.add-content-link-container {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.button-primary {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #2980b9;
+}
+
+.content-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.content-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-header {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #343a40;
+}
+
+.card-body {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.card-body p {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+  color: #495057;
+}
+
+.card-footer {
+  padding: 10px 15px;
+  border-top: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.score-badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: white;
+}
+
+.list-seo {
+  background-color: #28a745;
+}
+
+.list-compliance {
+  background-color: #fd7e14;
+}
+
+.error-message-list {
+  color: #e74c3c;
+  background-color: #fadbd8;
+  border: 1px solid #f5b7b1;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+} 

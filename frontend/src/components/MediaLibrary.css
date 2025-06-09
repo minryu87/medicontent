@@ -1,0 +1,117 @@
+/* medicontent/frontend/src/components/MediaLibrary.css */
+.media-library-container {
+  margin-top: 20px; /* ContentCreate.tsx 등에서 사용될 때의 상단 여백 */
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #fdfdfd;
+}
+
+.media-library-container h4 { /* "내 미디어 라이브러리" 제목 */
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+  text-align: left; /* ContentCreate 내에서는 좌측 정렬이 나을 수 있음 */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 반응형 그리드 */
+  gap: 16px; /* 아이템 사이 간격 */
+}
+
+.media-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 컨텐츠를 위아래로 분산 */
+}
+.media-item:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.media-item-thumbnail {
+  width: 100%;
+  height: 100px; /* 썸네일 높이 고정 */
+  object-fit: cover; /* 이미지 비율 유지하며 채우기 */
+  border-radius: 3px;
+  margin-bottom: 8px;
+  cursor: pointer; /* 선택 가능함을 암시 */
+}
+
+.media-item-alt {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 10px;
+  word-break: break-all; /* 긴 텍스트 줄바꿈 */
+  flex-grow: 1; /* 남은 공간 채우기 (텍스트가 짧을 때 버튼이 아래로 밀리도록) */
+}
+
+.media-item-actions {
+  display: flex;
+  gap: 8px; /* 버튼 사이 간격 */
+  justify-content: center; /* 버튼 중앙 정렬 */
+}
+
+.media-item-actions button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.button-select {
+  background-color: #007bff;
+  color: white;
+}
+.button-select:hover {
+  background-color: #0056b3;
+}
+
+.button-delete {
+  background-color: #dc3545;
+  color: white;
+}
+.button-delete:hover {
+  background-color: #c82333;
+}
+
+/* 메시지 영역 */
+.media-library-message-area {
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.media-library-success {
+  background-color: #e8f5e9;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+.media-library-error {
+  background-color: #ffebee;
+  color: #b71c1c;
+  border: 1px solid #f5c6cb;
+}
+
+.no-media-message {
+  padding: 15px;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+} 

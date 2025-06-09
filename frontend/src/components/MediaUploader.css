@@ -1,0 +1,57 @@
+/* medicontent/frontend/src/components/MediaUploader.css */
+.media-uploader-container {
+  margin-top: 10px; /* 다른 요소와의 간격 */
+  padding: 10px;
+  border: 1px dashed #ccc; /* 점선 테두리로 업로드 영역 표시 */
+  border-radius: 6px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 내부 요소들 중앙 정렬 */
+  gap: 10px; /* 내부 요소들 사이 간격 */
+}
+
+/* 실제 파일 입력을 숨기고, 레이블을 버튼처럼 스타일링 */
+.media-uploader-container input[type="file"] {
+  display: none; /* 실제 input 숨기기 */
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+.file-input-label:hover {
+  background-color: #0056b3;
+}
+.file-input-label.loading { /* 로딩 중일 때 버튼 비활성화 느낌 */
+  background-color: #a0cffd;
+  cursor: not-allowed;
+}
+
+.upload-status-message {
+  font-size: 0.9rem;
+  margin-left: 8px; /* 버튼과의 간격 */
+}
+
+.upload-loading-message {
+  color: #007bff; /* 파란색 계열로 로딩 표시 */
+}
+
+.upload-error-message {
+  color: #dc3545; /* 빨간색으로 에러 표시 */
+  font-weight: bold;
+}
+
+.selected-file-name {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 5px;
+} 

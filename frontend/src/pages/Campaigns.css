@@ -1,0 +1,178 @@
+/* medicontent/frontend/src/pages/Campaigns.css */
+.campaigns-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.campaigns-container h2 { /* 페이지 제목 */
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+/* 새 캠페인 생성 폼 */
+.create-campaign-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+}
+
+.create-campaign-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #444;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap; /* 작은 화면에서 줄바꿈 허용 */
+  gap: 15px; /* 입력 필드 사이 간격 */
+  margin-bottom: 15px;
+}
+
+.form-field {
+  flex: 1; /* 가능한 많은 공간 차지 */
+  min-width: 200px; /* 최소 너비 설정 */
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.form-field input[type="text"],
+.form-field input[type="date"],
+.form-field input[type="number"],
+.form-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+.create-campaign-form button {
+  display: block; /* 버튼을 블록 요소로 만들어 전체 너비 사용 */
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px; /* 위 요소와 간격 */
+}
+.create-campaign-form button:hover {
+  background-color: #0056b3;
+}
+
+/* 캠페인 목록 */
+.campaigns-list-title { /* "캠페인 목록" 소제목 */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.campaigns-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.campaign-item {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.campaign-item:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.campaign-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.campaign-item-header strong {
+  color: #007bff; /* 캠페인 이름 강조 */
+  font-size: 1.2rem;
+}
+
+.campaign-status {
+  font-size: 0.9rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: white;
+}
+/* 예시: 상태별 배경색 (실제 status 값에 따라 조정 필요) */
+.status-active { background-color: #28a745; } /* Green */
+.status-pending { background-color: #ffc107; color: #333; } /* Yellow */
+.status-ended { background-color: #6c757d; } /* Gray */
+
+
+.campaign-item-meta {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.campaign-item-actions {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.campaign-item-actions .link-button { /* 상세 보기 등 버튼 */
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+
+
+/* 메시지 영역 */
+.campaign-message-area {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.campaign-success-message {
+  background-color: #e8f5e9;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.campaign-error-message {
+  background-color: #ffebee;
+  color: #b71c1c;
+  border: 1px solid #f5c6cb;
+}
+
+.no-campaigns-message {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-style: italic;
+} 
